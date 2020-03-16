@@ -33,5 +33,7 @@ set listchars+=eol:¬
 set listchars+=space:·
 set list
 
-autocmd FileType python setlocal foldmethod=expr foldexpr=getline(v:lnum)=~'^\s*#'
+autocmd FileType python setlocal foldmethod=indent
+autocmd FileType sh setlocal foldmethod=expr foldexpr=getline(v:lnum)=~'^\s*#'
 autocmd FileType make set noexpandtab shiftwidth=2 softtabstop=0
+autocmd FileType latex set textwidth=80
